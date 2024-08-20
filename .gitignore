@@ -2,9 +2,8 @@
 *
 
 # But not these files...
-!deploy/.
+!/deploy
 !.gitignore
 
 # ...even if they are in subdirectories
 !*/
-/.quarto/
