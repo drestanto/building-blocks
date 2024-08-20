@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Summary – Building Blocks</title>
+<title>7&nbsp; Sorting – Building Blocks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./location.html" rel="prev">
+<link href="./logic-gates.html" rel="next">
+<link href="./gpu.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./summary.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sorting.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Sorting</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sorting.html" class="sidebar-item-text sidebar-link">
+  <a href="./sorting.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Sorting</span></span></a>
   </div>
 </li>
@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active">
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
@@ -189,15 +189,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#bubble-sort" id="toc-bubble-sort" class="nav-link active" data-scroll-target="#bubble-sort"><span class="header-section-number">7.1</span> Bubble Sort</a>
+  <ul class="collapse">
+  <li><a href="#what-is-bubble-sort" id="toc-what-is-bubble-sort" class="nav-link" data-scroll-target="#what-is-bubble-sort"><span class="header-section-number">7.1.1</span> What is Bubble Sort</a></li>
+  <li><a href="#how-to-bubble-sort" id="toc-how-to-bubble-sort" class="nav-link" data-scroll-target="#how-to-bubble-sort"><span class="header-section-number">7.1.2</span> How to Bubble Sort</a></li>
+  </ul></li>
+  <li><a href="#other-sorting-algorithms" id="toc-other-sorting-algorithms" class="nav-link" data-scroll-target="#other-sorting-algorithms"><span class="header-section-number">7.2</span> Other Sorting Algorithms</a></li>
+  <li><a href="#parallel-sort" id="toc-parallel-sort" class="nav-link" data-scroll-target="#parallel-sort"><span class="header-section-number">7.3</span> Parallel Sort</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Sorting</span></h1>
 </div>
 
 
@@ -214,9 +226,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In summary, this book explain how people create building blocks to encapsulate a bunch of hard stuffs.</p>
+<section id="bubble-sort" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="bubble-sort"><span class="header-section-number">7.1</span> Bubble Sort</h2>
+<section id="what-is-bubble-sort" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="what-is-bubble-sort"><span class="header-section-number">7.1.1</span> What is Bubble Sort</h3>
+</section>
+<section id="how-to-bubble-sort" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="how-to-bubble-sort"><span class="header-section-number">7.1.2</span> How to Bubble Sort</h3>
+</section>
+</section>
+<section id="other-sorting-algorithms" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="other-sorting-algorithms"><span class="header-section-number">7.2</span> Other Sorting Algorithms</h2>
+</section>
+<section id="parallel-sort" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="parallel-sort"><span class="header-section-number">7.3</span> Parallel Sort</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -641,13 +667,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./location.html" class="pagination-link" aria-label="Locating Computers">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Locating Computers</span></span>
+      <a href="./gpu.html" class="pagination-link" aria-label="GPU in a Nutshell">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">GPU in a Nutshell</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./logic-gates.html" class="pagination-link" aria-label="Logic Gates">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logic Gates</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
